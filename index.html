@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>PubNub Bitcoin Solution Kit</title>
+    <title>Bitcoin Solution Kit</title>
     <link href="dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="dist/css/styles.css" rel="stylesheet">
 </head>
@@ -16,12 +16,7 @@
 <div id="wrap"><div class="navbar-default">
 <div class="container">
     <div class="navbar-header">
-        <a
-            class="navbar-brand"
-            target="pubnubwebsite"
-            href="http://www.pubnub.com/"
-        >
-        <div class="pubnub-logo-header"></div>
+       
         Bitcoin Exchange Solution Kit</a>
     </div>
     <ul class="nav navbar-nav navbar-right">
@@ -55,9 +50,8 @@
         <p class="lead">
             Developers can quickly and easily deliver 
 	    real-time trade, pricing and collaborative features
-	    <BR>to Bitcoin exchanges using the
-            <strong>PubNub Real-Time</strong>
-            <strong>Network.</strong>
+	    <BR>to Bitcoin exchanges.
+           
         </p>
         <p><a
             class="btn btn-lg btn-info"
@@ -284,7 +278,7 @@
                 pricing information in order to execute trades
                 effectively. Building the infrastructure to stream this
                 data to thousands of devices simultaneously can be
-                costly and difficult to manage. PubNub provides a
+                costly and difficult to manage. We provide a
                 core messaging platform allowing developers to publish
                 data streams to millions of devices in less
                 than ¼ of a second without the need for any
@@ -301,7 +295,7 @@
             <p>
                 Accurate tracking of transaction data and history is
                 critical to providing a high-trust trading experience.
-                PubNub can automatically record all data that has been
+                We can automatically record all data that has been
                 published over the network for quick retrieval and
                 playback. In the event a transaction is interrupted
                 for some reason (network connection issues,
@@ -320,10 +314,10 @@
                 Security is paramount in a trading platform.
                 Transaction and account information must be kept
                 private from end to end.
-                PubNub offers various encryption and access control
+                We offers various encryption and access control
                 options to manage all stream data.
                 Access can be controlled for all operations within
-                the PubNub Real-Time Network.
+                the Real-Time Network.
             </p>
         </div>
     </div>
@@ -338,8 +332,6 @@
             </span>
         </h2>
         <p class="lead">
-PubNub provides powerful community collaboration features like real-time user presence detection, enabling real-time customer collaboration.  With PubNub, it’s easy to build real-time chat, forums, and other collaboration features that allow customers to share information and receive assistance throughout the trading process.
-
         </p>
     </div>
     <div class="col-md-5">
@@ -367,7 +359,7 @@ PubNub provides powerful community collaboration features like real-time user pr
             The foundation for all these features is the ability
             to maintain a persistent network connection to
             all devices, all the time.
-            PubNub ensures that network sockets remain open to any
+            We ensure that network sockets remain open to any
             device and that data can be delivered
             in under ¼ of second anywhere in the world.
         </p>
@@ -384,7 +376,7 @@ PubNub provides powerful community collaboration features like real-time user pr
         </h2>
         <p class="lead">
             Understanding user behaviour is critical to any
-            emerging platform. PubNub provides key analytic
+            emerging platform. We provide key analytic
             data to track unique visitor, traffic volume by
             data type and geographical information over time.
             All of this data is presented in a dashboard in
@@ -408,137 +400,13 @@ PubNub provides powerful community collaboration features like real-time user pr
 
         <div class="col-lg-12">
         <h2 class="featurette-heading">
-            Step-by-Step Solution Kit Guide.
-        </h2>
-        <p class="lead">
-	These simple docs will walk you through how to use all the components of Bitcoin Exchange Solution Kit.  <BR><BR> The Solution Kit contains client-side (JavaScript) and server-side components (example PHP code, but PubNub supports all popular server-side languages).  This Solution Kit will demonstrate how to use the PubNub Real-Time Network to stream trades, price, social, and other data to end-users, as well as other related uses.  <BR><BR>  While the examples below are in JavaScript and PHP, PubNub supports iOS, Android, Python, .NET, Java, and over 50 other programming environments.  Head over to the <a href="http://www.pubnub.com/developers">PubNub Developer Page</a> to download the SDKs needed for your environment.<BR><BR>
-	</p>
-
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-lg-12">
-		<h4> 1. <a href="https://admin.pubnub.com/">Get Free PubNub API Keys</a> to Power the Solution Kit</h4>
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    <p>
-                        You'll need some API Keys to get started.
-                        Follow these easy steps:
-                    </p>
-
-                    <table class="table table-hover">
-                        <thead>
-                            <tr>
-                                <th>Step</th>
-                                <th>Action to Take</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr><td>1</td><td>
-                                Signup For PubNub - 
-                                <a href="https://admin.pubnub.com/">
-                                    Signup/Login to 
-                                    PubNub Admin Portal
-                                </a>
-                                <p><small>
-                                    Optionally Watch
-                                    PubNub Basic Video 1 -
-                                    <a href="https://vimeo.com/78274848">
-                                        Registering for PubNub API Keys
-                                    </a>
-                                    <br>
-                                    The video also describes what
-                                    each key purpose.
-                                </small></p>
-                            </td></tr>
-                            <tr><td>2</td><td>
-                                <a href="http://www.pubnub.com/developers">Download the SDKs</a>
-                                 you will need for your programming environment.
-                                 (The examples below use PHP and JavaScript).
-                            </td></tr>
-                        </tbody>
-                    </table>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</div></div>
-
-
-<!-- PUBLISHING DATA FROM THE SERVER -->
-<div class="pubnub-code-docs pubnub-code-init"><div class="container">
-    <div class="row">
-        <div class="col-lg-6">
-            <h3>2. Publishing Stream in PHP</h3>
-<pre class="code">
-&lt;?php
-// Require PubNub Library
-require_once('Pubnub.php');
-
-// Init PubNub Instance Class
-$pubnub = new Pubnub(
-    $publish_key,
-    $subscribe_key
-);
-
-// Publish Ticker Feed Data
-$pubnub-&gt;publish(array(
-    'channel' =&gt; 'ticker',
-    'message' =&gt; array(
-        'date'           =&gt; 1386661231,
-        'amount'         =&gt; 0.1,
-        'price'          =&gt; 940.00001,
-        'price_currency' =&gt; 'USD'
-    )
-));
-?&gt;
-</pre>
-        </div>
-        <div class="col-lg-6">
-            <h4>Providing Data for your Subscribers</h4>
-        <p class="lead"> Real-Time Feeds are easy!  Simply take the latest pricing or trade data as it occurs and publish it into a PubNub "channel" from your server.  In the example to the left, the channel "ticker" is used; however, you can use countless PubNub channels that each end-user can subscribe to.  The example here uses PHP, however this model works equally well with Java, Python, .NET, Perl, or any other server environment.</p>
-        </div>
-    </div>
-</div></div>
-<!-- INIT CODE DOCS -->
-<div class="pubnub-code-docs pubnub-code-init"><div class="container">
-    <div class="row">
-        <div class="col-lg-6">
-            <h3>3. Add PubNub to JavaScript</h3>
-<pre class="code">
-var pubnub = PUBNUB.init({
-    subscribe_key : 'YOUR_SUBSCRIBE_KEY_HERE'
-});
-</pre>
-        </div>
-        <div class="col-lg-6">
-            <h4>Initalize PubNub on your Page</h4>
-            <p>
-                The first step in receiving real-time data thru PubNub is to 
-                initialize PubNub on your webpage.  PubNub works on any web and mobile browser,
-                from IE6 thru the latest Chrome, Firefox, and Opera browsers. <BR> 
-                
-               
-              
-            </p><p>
-                The following examples below will
-                show a few more options
-                that will allow you to open TCP sockets and stream
-                only the data that you are interested in.
-                This is called <strong>Stream Multiplexing</strong>
-                which streams multiple feeds over a single TCP Socket.
-            </p>
-        </div>
-    </div>
-</div></div>
+            
+                                
+        
 
 
 <!-- OPENING EXCHANGE STREAM (MT.GOX AS EXAMPLE) -->
-<div class="pubnub-code-docs pubnub-code-init"><div class="container">
-    <div class="row">
-        <div class="col-lg-6">
-            <h3>4. Subscribe to the Stream</h3>
+
 <pre class="code">
 pubnub.subscribe({
     backfill : true,
